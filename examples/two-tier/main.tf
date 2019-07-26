@@ -141,3 +141,8 @@ resource "aws_instance" "web" {
     ]
   }
 }
+
+module "ec2-autoscale-group" {
+  source  = "ptfe.stag.1life.com/infra/ec2-autoscale-group/aws"
+  version = "0.1.3"
+}
